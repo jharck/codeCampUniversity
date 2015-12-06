@@ -1,1 +1,247 @@
-Hello World!
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+
+
+/* Repeat a string repeat a string
+
+*/
+
+
+
+
+function truncate(str, num) {
+  // Clear out that junk in your trunk
+
+  numberCharacters = str.length;
+
+  var strResult = "";
+
+  if (numberCharacters <= 3) {
+    strResult = str.slice(0, -(numberCharacters - num)) + "...";
+
+  } else if (numberCharacters > 3 && numberCharacters > num && num > 3) {
+    strResult = str.slice(0, -(numberCharacters -(num - 3))) + "...";
+  } else if (numberCharacters > 3 && numberCharacters > num && num <= 3){
+    strResult = str.slice(0, num) + "...";
+  } else {
+    strResult = str;
+  }
+  return strResult;
+}
+
+
+
+truncate("Absolutely Longer", 2);
+
+
+
+/* Repeat a string repeat a string
+
+
+
+
+function repeat(str, num) {
+  // repeat after me
+  var result = "";
+
+  if (num < 0 ) {
+    result = "";
+  } else {
+    for (i = 0; i < num; i++) {
+      result += str; 
+    }
+  }
+
+  document.write(result);
+  return result;
+
+}
+
+repeat("abc", -2);
+
+
+*/
+
+
+
+
+/* Exercise confirm the ending
+
+
+function end(str, target) {
+  // "Never give up and good luck will find you."
+  // -- Falcor
+
+  var sizeResult = str.length - target.length;
+
+  var valueStr = str.substr(sizeResult);
+
+  if (valueStr === target) {
+
+    return true;
+
+  } else {
+
+  return false;
+
+  }
+}
+
+end("He has to give me a new name", "name");
+
+
+*/
+
+
+
+
+
+/* Largest number of each array
+
+
+
+
+function largestOfFour(arr) {
+  // You can do this!
+  var maxNumbers = [0, 0, 0, 0];
+  for (i = 0; i < arr.length; i++) {
+
+    for (j = 0; j < arr[i].length; j++) {
+
+      if (arr[i][j] > maxNumbers[i]) {
+        maxNumbers[i] = arr[i][j]; 
+      } else {
+        // No hago nada
+      }
+    }
+
+  }
+
+  return maxNumbers;
+}
+
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+
+
+
+*/
+
+
+
+
+
+
+
+
+/* Exercise Title Case a sentence
+
+
+
+
+
+
+function titleCase(str)
+
+  return str.replace(/\w\S* /g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+
+}
+
+
+
+titleCase("I'm a little tea pot");
+
+*/
+
+
+
+/* Exercise longest word on a String
+
+
+
+
+function findLongestWord(str) {
+  
+  var longestWord = 0;
+  var wordCounting = 0;
+
+  var arrayString = str.split(" ");
+	
+  for ( i = 0; i < arrayString.length; i++) {
+  	wordCounting = arrayString[i].length;
+	  	if ( wordCounting > longestWord ) {
+	  		longestWord = wordCounting;
+	  	} else {
+	  		longestWord = longestWord;
+	  	}
+  }
+
+  return longestWord;
+
+}
+
+findLongestWord("The quick brown fox jumped over the lazy dog");
+
+*/
+
+
+/* Exercise Palindromes
+
+
+
+
+function palindrome(str) {
+  // Good luck!
+
+  var originalString = str.replace(/[\s.,:;()/_]/g, '').replace(/-/g,"").toLowerCase();
+
+  var newArray = originalString.split("").reverse();
+
+  var finalString = newArray.toString().replace(/,/g, '');
+
+  document.write(newArray + "  this is newArray ");
+
+  if (originalString == finalString){
+  	return true;	
+  } else {
+  	return false;
+  }
+  
+}
+
+
+
+palindrome("0_0 (: /-\ :) 0-0");
+
+*/
+
+
+/*
+
+// ******************************* Start your code below **********************************
+
+function factorialize(num) {
+	var value = 1;
+  for ( i = 1; i <= num; i++ ) {
+  	value *= i; 
+    document.write("<br>" + " num var -> " + num + " i var ->" + i + " value var ->" + value);
+  }
+  return value;
+}
+
+factorialize(5);
+
+
+
+// ****************************** END OF YOUR CODE ****************************************
+
+*/
+
+</script>
+
+</body>
+</html>
