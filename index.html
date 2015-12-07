@@ -7,10 +7,41 @@
 <script>
 
 
-document.write("<h1>Hello World !!!</h1>");
 
 
+/* Repeat a string repeat a string
 
+*/
+
+function addArrays(size, arr, position) {
+
+  document.write("<br> Entro a la funcion addArray" + " " + size + " " + arr + " " + position);
+
+}
+
+
+function chunk(arr, size) {
+  // Break it up.
+
+  sizeArray = arr.length;
+  splitE = sizeArray % size;
+
+
+  if (splitE === 0) {
+
+
+    for (i = 0; i < sizeArray; i++) {
+
+      addArrays(size, arr, i);
+
+    }
+
+  }
+
+  return arr;
+}
+
+chunk(["a", "b", "c", "d"], 2);
 
 
 
@@ -44,8 +75,8 @@ function truncate(str, num) {
 
 
 truncate("Absolutely Longer", 2);
-*/
 
+*/
 
 /* Repeat a string repeat a string
 
