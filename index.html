@@ -16,10 +16,17 @@
 function addArrays(size, arr, position) {
 
   var mergedArray = [];
+  strArray = "";
 
-  currentCount = mergedArray.push([arr[position], arr[position+1]]);
+  for (j = 0; j < size; j++) {
+    strArray += arr[position+j] + ",";
+  }
 
-  document.write("<br> Entro a la funcion addArray" + " " + size + " " + arr + " " + position + " " + mergedArray);
+  currentCount = mergedArray.push(strArray);
+
+  document.write("<br> Entro a la funcion addArray" + " " + size + " " + position + " " + strArray + " " + mergedArray);
+
+  return mergedArray;
 
 }
 
@@ -27,16 +34,22 @@ function addArrays(size, arr, position) {
 function chunk(arr, size) {
   // Break it up.
 
+  resultFunction = "";
   sizeArray = arr.length;
   splitE = sizeArray % size;
 
 
   if (splitE === 0) {
 
+    finalArray = "";
 
     for (i = 0; i < sizeArray; i+=size) {
 
-      addArrays(size, arr, i);
+      resultFunction = addArrays(size, arr, i);
+
+      finalArray += resultFunction;
+
+      document.write(finalArray);
 
     }
 
@@ -45,7 +58,7 @@ function chunk(arr, size) {
   return arr;
 }
 
-chunk(["a", "b", "c", "d"], 2);
+chunk([0, 1, 2, 3, 4, 5], 3);
 
 
 
