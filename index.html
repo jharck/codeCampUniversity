@@ -37,30 +37,53 @@ function chunk(arr, size) {
   resultFunction = "";
   sizeArray = arr.length;
   splitE = sizeArray % size;
+  strArray = "";
+  mergedArray = [];
 
 
   if (splitE === 0) {
 
     finalArray = "";
 
-    for (i = 0; i < sizeArray; i+=size) {
+    for (i = 0; i < sizeArray; i++) {
 
-      resultFunction = addArrays(size, arr, i);
+      if (i === 0) {
+        strArray += "[" + arr[i];
 
-      finalArray += resultFunction;
+        document.write("<br>" + i + strArray);
 
-      document.write(finalArray);
+      } else if ((i % size) === 0) {
 
+        strArray += "]," + "[" + arr[i];
+        document.write("<br> IF ENDING" + i + strArray);
+
+      } else if (i === (sizeArray -1)) {
+
+        strArray += "," + arr[i] + "]";
+
+      } else {
+        strArray += ", " + arr[i];
+        document.write("<br>" + i + strArray);
+      }
+      
+      
     }
+
+    finalArray = mergedArray.push(strArray);
+    document.write("<br><br> This is the final array: " + mergedArray);
 
   }
 
   return arr;
 }
 
+chunk(["a", "b", "c", "d"], 2);
+
 chunk([0, 1, 2, 3, 4, 5], 3);
 
+chunk([0, 1, 2, 3, 4, 5], 2);
 
+chunk([0, 1, 2, 3, 4, 5], 4);
 
 
 /* Repeat a string repeat a string
