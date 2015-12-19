@@ -8,10 +8,46 @@
 
 
 
+/* Bonfire: Mutations - Exercise 193
+
+*/
+
+
+function mutation(arr) {
+  return arr;
+}
+
+mutation(["hello", "hey"]);
+
+
+
+/* Bonfire: Slasher Flick - Exercise 192
+
+
+function slasher(arr, howMany) {
+  // it doesn't always pay to be first
+  
+  
+
+  finalArray = arr.slice(howMany, arr.length);
+  
+  return finalArray;
+
+}
+
+slasher([1, 2, 3], 4);
+
+
+
+
+*/
+
+
+
 
 /* Repeat a string repeat a string
 
-*/
+
 
 function addArrays(size, arr, position) {
 
@@ -34,7 +70,6 @@ function addArrays(size, arr, position) {
 function chunk(arr, size) {
   // Break it up.
 
-  resultFunction = "";
   sizeArray = arr.length;
   splitE = sizeArray % size;
   strArray = "";
@@ -48,33 +83,31 @@ function chunk(arr, size) {
     for (i = 0; i < sizeArray; i++) {
 
       if (i === 0) {
-        strArray += "[" + arr[i];
-
-        document.write("<br>" + i + strArray);
+        strArray += "[[" + arr[i];
 
       } else if ((i % size) === 0) {
 
         strArray += "]," + "[" + arr[i];
-        document.write("<br> IF ENDING" + i + strArray);
 
       } else if (i === (sizeArray -1)) {
 
-        strArray += "," + arr[i] + "]";
+        strArray += "," + arr[i] + "]]";
 
       } else {
         strArray += ", " + arr[i];
-        document.write("<br>" + i + strArray);
       }
       
-      
+      finalArray = strArray.split(',');
+
     }
 
-    finalArray = mergedArray.push(strArray);
-    document.write("<br><br> This is the final array: " + mergedArray);
+    mergedArray.push(finalArray);
+
+    document.write(mergedArray);
 
   }
 
-  return arr;
+  return mergedArray;
 }
 
 chunk(["a", "b", "c", "d"], 2);
@@ -85,6 +118,10 @@ chunk([0, 1, 2, 3, 4, 5], 2);
 
 chunk([0, 1, 2, 3, 4, 5], 4);
 
+
+
+
+*/
 
 /* Repeat a string repeat a string
 
