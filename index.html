@@ -7,18 +7,76 @@
 <script>
 
 
-
-/* Bonfire: Mutations - Exercise 193
+/* Bonfire: Seek and Destroy - Exercise 195
 
 */
 
 
-function mutation(arr) {
-  return arr;
+function destroyer(arr) {
+  // Remove all the values
+
+  function startsWith(element) {
+    return element.indexOf(this) === 0;
+}
+arr.filter(startsWith, arguments[1]);
+
+
+  document.write("<br> Este es el array final " + resultArray + " ");
+
+  return resultArray;
+
 }
 
-mutation(["hello", "hey"]);
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
 
+
+/* Bonfire: Falsy Bouncer - Exercise 194
+
+
+function bouncer(arr) {
+  // Don't show a false ID to this bouncer.
+
+  function isFalseID(value){
+  	return Boolean(value) === true;
+  }
+
+  var resultArray = arr.filter(isFalseID);
+  return resultArray;
+
+}
+
+bouncer([7, "ate", "", false, 9]);
+
+*/
+
+
+/* Bonfire: Mutations - Exercise 193
+
+
+function mutation(arr) {
+
+  var str = arr[1].toLowerCase();
+  var resultArray = true;
+  isLetterOnString = 0;
+
+  for(i = 0; i < arr[1].length; i++) {
+  	letterAtPosition = str.charAt(i);
+  	isLetterOnString = arr[0].toLowerCase().indexOf(letterAtPosition);
+  	if (isLetterOnString === -1) {
+  		resultArray = false;
+  		return resultArray;
+  	} else {
+  		resultArray = true;
+  	}
+  }
+
+  return resultArray;
+}
+
+mutation(["hello", "neo"]);
+
+
+*/
 
 
 /* Bonfire: Slasher Flick - Exercise 192
