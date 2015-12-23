@@ -7,27 +7,57 @@
 <script>
 
 
+
+
+numbers = [1,2,3,4,5,4,3,2,1]; 
+var filterResult = numbers.filter(function(i){
+
+
+  
+    return (i > 2);
+}); 
+
+
+document.write(filterResult);
 /* Bonfire: Seek and Destroy - Exercise 195
 
 */
 
 
+
+/*
+
 function destroyer(arr) {
   // Remove all the values
 
+
+
+
+
+
+
   function startsWith(element) {
-    return element.indexOf(this) === 0;
-}
-arr.filter(startsWith, arguments[1]);
+
+    element.indexOf(1) === 0;
+    document.write("<br>" + element + " this is the argument: " + finalV);
+  }
+  
+
+  resultArray = arr.filter(startsWith, 1);
 
 
-  document.write("<br> Este es el array final " + resultArray + " ");
+
+
+  document.write("<br> Este es el array final " + arguments[1]);
 
   return resultArray;
 
 }
 
 destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
+
+*/
 
 
 /* Bonfire: Falsy Bouncer - Exercise 194
