@@ -9,8 +9,22 @@
 
 
 function destroyer(arr) {
+  
+  document.write("Creating array from Arguments <br>");
+  
   var args = Array.prototype.slice.call(arguments);
+  
+  document.write("Results of the Array " + args + "<br>");
+  
+  
+  document.write("Removing extra paramenters from Array <br>");
+  
   args.splice(0, 1);
+  
+  document.write("Results of the new Array without parameters <br>");
+  
+  document.write("About to call funtion to filter data <br>");
+  
   return arr.filter(function(element) {
     return args.indexOf(element) === -1;
   });
