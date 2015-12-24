@@ -10,8 +10,8 @@
 
 function destroyer(arr) {
   // Remove all the values
-  
-  document.write(arguments[2]);
+  var args = Array.prototype.slice.call(arguments);
+  document.write(arguments[2] + "" + args);
   
   return arr;
 }
