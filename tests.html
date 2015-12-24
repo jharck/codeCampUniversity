@@ -6,12 +6,23 @@
 
 <script>
 
-numbers = [1,2,3,4,5,4,3,2,1]; 
-var filterResult = numbers.filter(function(i){
+
+
+function destroyer(arr) {
+  // Remove all the values
   
-    return (i > 2);
-}); 
-document.write(filterResult);
+  document.write(arguments);
+  
+  return arr;
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
+
+
+
+
+
 
 </script>
 
